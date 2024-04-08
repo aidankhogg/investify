@@ -4,7 +4,9 @@ def environment_check(results_only: bool = True):
     :param results_only: check only? or attempt to resolve compatibility issues?
     :return: dictionary breakdown OR boolean if 'results_only' is true
     """
-    pass
+    paths = {
+
+    }
 
 
 class Installer(object):

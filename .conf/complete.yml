@@ -1,0 +1,9 @@
+markets:
+  commodities:
+    market_enabled: false
+  cryptocurrency:
+    market_enabled: true
+  options:
+    market_enabled: false
+  stocks:
+    market_enabled: true
