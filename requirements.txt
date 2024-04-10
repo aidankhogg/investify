@@ -7,16 +7,15 @@ omegaconf~=2.3.0
 cachetools~=5.3.3
 loguru~=0.7.2
 watchdog~=4.0.0
-humanfriendly
+humanfriendly~=10.0
+cryptography~=42.0.5
 
-numpy
-pandas
-matplotlib
+numpy~=1.26.3
+pandas~=2.2.1
+matplotlib~=3.8.4
 
 aiohttp
 
-alpaca-py
-backtrader
+alpaca-py~=0.20.3
+backtrader~=1.9.78.123
 
-
-pyfolio

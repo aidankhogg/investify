@@ -1,9 +1,30 @@
 markets:
   commodities:
     market_enabled: false
+    appetite: open
+    ranges:
+      - long
+      - medium
+
+
   cryptocurrency:
     market_enabled: true
+    appetite: open
+    ranges:
+      - short
+
   options:
     market_enabled: false
-  stocks:
+    appetite: cautious
+    ranges:
+      - long
+      - medium
+      - short
+
+  shares:
     market_enabled: true
+    ranges:
+      - long
+      - medium
+      - short
+    appetite: hungry

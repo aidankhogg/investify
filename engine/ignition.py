@@ -1,3 +1,4 @@
+import logging
 import os
 from typing import Union
 
@@ -7,7 +8,7 @@ from engine.cacher import cached, conf_cache
 def detect_project_path(override_flag_file: Union[str, None] = None) -> str:
     """
     Get project path from by detecting a flag file. 'main.py' by default
-    :param override_flag_file: specificy an alternative file to be used as the flag of the root directory
+    :param override_flag_file: specify an alternative file to be used as the flag of the root directory
     :return: string of the path or raises *FileNotFoundError*
     """
     current_dir = os.path.abspath(os.curdir)
@@ -35,4 +36,11 @@ def get_project_path(detect_file: Union[str, None] = None) -> str:
     return os.environ['INVESTIFY_PATH']
 
 
-print(get_project_path())
+get_project_path()
+if os.environ.get('INVESTIFY_CONFIGURED', False) is False:
+    logging.warning("INVESTIFY NOT CONFIGURED. INITIALIZING INSTALLATION.")
+    from engine.installed import Installer
+    installer = Installer()
+else:
+    from engine.logged import log
+    log.info("Initializing Investify")

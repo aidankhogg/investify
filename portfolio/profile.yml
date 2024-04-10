@@ -1,0 +1,86 @@
+personal_profile:
+  demographics:
+    age: 0
+    employment: 'unemployed'
+    annual_income: 0
+
+  background:
+    experience: 'beginner'
+
+
+  financial_goals:
+    short_term: null
+    medium_term: null
+    long_term: null
+
+  financial_health: null
+
+  tax_considerations: null
+
+starting_status:
+  liquid_assets:
+    cash:
+      gbp: 0
+      usd: 0
+      eur: 0
+    crypto:
+      btc: 0
+      eth: 0
+    banks:
+      current_accounts:
+        example:
+          bank: 'unknown'
+          type: 'current'
+          balance: 0
+          currency: 'GBP'
+  existing_portfolios:
+    alpaca: null
+    binance: null
+
+
+market_choices:
+  commodities:
+    market_enabled: false
+    appetite: 'open'
+    ranges:
+      - 'long'
+      - 'medium'
+    platforms:
+      - name: 'alpaca'
+        enabled: true
+
+
+  cryptocurrency:
+    market_enabled: true
+    appetite: open
+    ranges:
+      - 'short'
+    loss_limits: null
+    platforms:
+      - name: 'alpaca'
+        enabled: true
+      - name: 'binance'
+        enabled: true
+
+  options:
+    market_enabled: false
+    appetite: 'cautious'
+    ranges:
+      - 'long'
+      - 'medium'
+      - 'short'
+    platforms:
+      - name: 'alpaca'
+        enabled: true
+
+  shares:
+    market_enabled: true
+    appetite: 'hungry'
+    ranges:
+      - 'long'
+      - 'medium'
+      - 'short'
+    platforms:
+      - name: 'alpaca'
+        enabled: true
+

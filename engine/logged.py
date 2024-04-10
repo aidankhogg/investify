@@ -7,7 +7,7 @@ import os.path
 from loguru import logger
 from sys import stderr, stdout
 
-from engine.configured import local_paths
+
 
 
 logger.remove()

@@ -7,10 +7,16 @@ def environment_check(results_only: bool = True):
     paths = {
 
     }
+    if results_only:
+        return True
 
 
 class Installer(object):
-    pass
+    def __init__(self):
+        self.results = environment_check()
+
+    def run_install(self):
+        pass
 
 
 if __name__ == '__main__':

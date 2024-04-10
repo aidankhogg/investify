@@ -3,19 +3,14 @@ from pathlib import Path
 from typing import Union
 from omegaconf import OmegaConf, DictConfig
 
+from engine.tools.places import local_paths
 from engine.cacher import cached, conf_cache
+from engine.ignition import get_project_path
 
 accepted_file_extensions = [".yaml", ".yml", '.conf']
 
 if os.environ.get('INVESTIFY_PATH', None) is None:
-    from engine.ignition import get_project_path
     os.environ['INVESTIFY_PATH'] = get_project_path('requirements.txt')
-
-local_paths = {
-    "root": get_project_path(),
-    "logs": os.path.join(get_project_path(), ".logs"),
-    "conf": os.path.join(get_project_path(), ".conf"),
-}
 
 
 def is_as_conf_file(filepath: Union[str, Path, os.PathLike]) -> bool:
